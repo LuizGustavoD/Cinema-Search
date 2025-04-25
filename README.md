@@ -14,6 +14,4 @@ Projeto de busca de filmes utilizando a [OMDb API](http://www.omdbapi.com/).
 -Projeto elaborado para o melhor entendimento.
 -utilização de linguagens com JS e afins.
 
-## 📄 Licença
 
-Esse projeto está sob a licença MIT.
