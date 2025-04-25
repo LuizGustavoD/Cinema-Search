@@ -1,0 +1,142 @@
+:root {
+  --purple-500: hsl(259, 100%, 65%);
+  --red-400: hsl(0, 100%, 67%);
+  --white: hsl(0, 100%, 100%);
+  --grey-100: hsl(0, 0%, 94%);
+  --grey-200: hsl(0, 0%, 86%);
+  --grey-500: hsl(0, 1%, 44%);
+  --black: hsl(0, 0%, 0%);
+}
+
+body, html{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family:Arial, sans-serif;
+}
+
+*{
+box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--grey-100);
+}
+
+.header{
+  width: 100%;
+  padding: 1em 2em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid var(--grey-200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: var(--grey-200);
+  color: var(--purple-500);
+}
+
+.header .mainTitle{
+  font-size: 3em;
+  margin-right: 0.5em;
+}
+
+.header .search input{
+  border: none;
+  padding: 0.8em;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+  margin-right: 5px;
+}
+
+.header .search input:focus{
+  background-color: var( --purple-500);
+  color: var(--white);
+  outline: none;
+  box-shadow: 0 0 10px var(--purple-500);
+  transform: scale(1.05);
+}
+
+.header .search input:focus::placeholder{
+  color: var(--white);
+}
+
+.header .search button{
+  background-color: var(--purple-500);
+  color: var(--white);
+  border: none;
+  padding: 0.6em 1em;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.header .search button:hover {
+  background-color: var(--red-400);
+  box-shadow: 0 0 10px var(--red-400);
+  transform: scale(1.05);
+}
+
+.header .search button:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 5px var(--red-400);
+}
+
+
+#showResult {
+  width: 90%;
+  margin: 1em auto;
+  padding: 1em;
+  background-color: var(--white);
+  border: 1px solid var(--grey-200);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#showResult:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+#showResult p {
+  margin: 0.5em 0;
+  color: var(--grey-500);
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+#showResult .highlight {
+  color: var(--purple-500);
+  font-weight: bold;
+}
+
+.copyInfos {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--grey-200);
+  color: var(--purple-500);
+  text-align: center;
+  padding: 1em;
+}
+
+.principalFooter:hover .copyInfos {
+  display: block;
+}
+
+.principalFooter:hover{
+  display: block;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
